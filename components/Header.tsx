@@ -47,15 +47,14 @@ export default function Header() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
-          isScrolled
+        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${isScrolled
             ? "bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100 h-20"
             : "bg-transparent h-24"
-        } flex items-center`}
+          } flex items-center`}
       >
         <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           {/* Logo Branding */}
-          <button 
+          <button
             onClick={() => scrollToSection("home")}
             className="flex items-center gap-2 cursor-pointer group text-left"
           >
@@ -63,14 +62,12 @@ export default function Header() {
               AF
             </div>
             <div>
-              <span className={`font-extrabold text-lg sm:text-xl tracking-tight transition-colors block ${
-                isScrolled ? "text-brand-dark group-hover:text-brand-primary" : "text-white group-hover:text-orange-200"
-              }`}>
+              <span className={`font-extrabold text-lg sm:text-xl tracking-tight transition-colors block ${isScrolled ? "text-brand-dark group-hover:text-brand-primary" : "text-white group-hover:text-orange-200"
+                }`}>
                 Advance Food
               </span>
-              <span className={`text-[10px] font-semibold tracking-wider uppercase block -mt-1 transition-colors ${
-                isScrolled ? "text-gray-500" : "text-white/70"
-              }`}>
+              <span className={`text-[10px] font-semibold tracking-wider uppercase block -mt-1 transition-colors ${isScrolled ? "text-gray-500" : "text-white/70"
+                }`}>
                 Export & Import
               </span>
             </div>
@@ -82,9 +79,8 @@ export default function Header() {
               <button
                 key={link.target}
                 onClick={() => scrollToSection(link.target)}
-                className={`text-sm font-semibold tracking-wide transition-colors cursor-pointer relative py-2 ${
-                  isScrolled ? "text-gray-700 hover:text-brand-primary" : "text-white/90 hover:text-white"
-                } group`}
+                className={`text-sm font-semibold tracking-wide transition-colors cursor-pointer relative py-2 ${isScrolled ? "text-gray-700 hover:text-brand-primary" : "text-white/90 hover:text-white"
+                  } group`}
               >
                 {link.label}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-primary transition-all duration-300 group-hover:w-full"></span>
@@ -94,11 +90,10 @@ export default function Header() {
             {/* Quick Call Action */}
             <a
               href="tel:+917622942202"
-              className={`flex items-center gap-2 text-sm font-bold px-4 py-2 rounded-full border transition-all duration-300 ${
-                isScrolled
+              className={`flex items-center gap-2 text-sm font-bold px-4 py-2 rounded-full border transition-all duration-300 ${isScrolled
                   ? "border-brand-primary text-brand-primary hover:bg-brand-primary hover:text-white"
                   : "border-white/40 text-white hover:bg-white hover:text-brand-dark"
-              }`}
+                }`}
             >
               <PhoneCall size={15} />
               <span>+91 76229 42202</span>
@@ -118,15 +113,13 @@ export default function Header() {
 
       {/* Mobile Drawer Navigation Overlay */}
       <div
-        className={`fixed inset-0 z-50 bg-black/60 transition-opacity duration-300 md:hidden ${
-          isMobileMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
-        }`}
+        className={`fixed inset-0 z-50 bg-black/60 transition-opacity duration-300 md:hidden ${isMobileMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+          }`}
         onClick={() => setIsMobileMenuOpen(false)}
       >
         <div
-          className={`absolute top-0 right-0 w-4/5 max-w-sm h-full bg-white shadow-2xl flex flex-col p-6 transition-transform duration-300 transform ${
-            isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
-          }`}
+          className={`absolute top-0 right-0 w-4/5 max-w-sm h-full bg-white shadow-2xl flex flex-col p-6 transition-transform duration-300 transform ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
+            }`}
           onClick={(e) => e.stopPropagation()}
         >
           {/* Drawer Top Branding and Close */}
@@ -167,14 +160,14 @@ export default function Header() {
               Direct Enquiry
             </p>
             <a
-              href="tel:+917622942202"
+              href="tel:+919825895232"
               className="flex items-center gap-3 text-brand-primary font-bold text-base hover:underline"
             >
               <PhoneCall size={18} />
-              <span>+91 76229 42202</span>
+              <span>+91 9825895232</span>
             </a>
             <p className="text-xs text-gray-500 mt-2 leading-relaxed">
-              APMC Marketing Yard, Mahuva, Gujarat, India - 364290
+              Mahuva, Gujarat, India - 364290
             </p>
           </div>
         </div>
